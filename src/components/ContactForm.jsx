@@ -23,11 +23,37 @@ export default function ContactForm() {
     ev.preventDefault();
     const e = validate();
     if (Object.keys(e).length) { setErrors(e); return; }
+
     setErrors({});
     setLoading(true);
-    await new Promise(r => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+
+    const formData = {
+      ...form,
+      access_key: "926ad43c-2cd4-4f18-8b6a-8ae2107b77c0",
+      subject: `New Lead from ${form.company}`,
+      from_name: "Cartfinch Website"
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        console.error("Submission failed:", result.message);
+        alert("Submission failed. Please try again.");
+      }
+    } catch (err) {
+      console.error("Network error:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (field, value) => {
