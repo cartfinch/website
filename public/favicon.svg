@@ -1,0 +1,98 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="finchGradient" x1="90" y1="430" x2="420" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#170046"></stop>
+      <stop offset="100%" stop-color="#3A0A85"></stop>
+    </linearGradient>
+  </defs>
+
+  <g fill="url(#finchGradient)">
+    
+    <!-- Body -->
+    <path d="
+      M344 102
+      C285 92 230 120 198 172
+      L150 248
+      C133 275 127 304 132 333
+      C141 387 182 423 244 423
+      C331 423 394 352 394 245
+      C394 185 374 133 344 102
+      Z
+    "></path>
+
+    <!-- Wing -->
+    <path d="
+      M264 182
+      C231 181 204 197 178 223
+      L96 306
+      L172 306
+      C242 306 293 272 313 222
+      C299 197 286 185 264 182
+      Z
+    "></path>
+
+    <!-- Tail -->
+    <path d="
+      M171 314
+      L67 418
+      L155 418
+      L215 344
+      Z
+    "></path>
+
+    <!-- Upper Beak -->
+    <path d="
+      M389 151
+      L463 176
+      L402 178
+      Z
+    "></path>
+
+    <!-- Lower Beak -->
+    <path d="
+      M399 183
+      L461 180
+      L414 208
+      Z
+    "></path>
+
+    <!-- Legs -->
+    <path d="
+      M221 407
+      L255 468
+      L238 468
+      L198 407
+      Z
+    "></path>
+
+    <path d="
+      M279 404
+      L325 468
+      L305 468
+      L255 404
+      Z
+    "></path>
+
+    <!-- Feet -->
+    <path d="
+      M181 468
+      H268
+      C276 468 282 474 282 480
+      H167
+      C167 474 173 468 181 468
+      Z
+    "></path>
+
+    <path d="
+      M250 468
+      H341
+      C349 468 355 474 355 480
+      H236
+      C236 474 242 468 250 468
+      Z
+    "></path>
+  </g>
+
+  <!-- Eye -->
+  <circle cx="336" cy="164" r="14" fill="#F5F5F5"></circle>
+</svg>
